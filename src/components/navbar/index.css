@@ -1,0 +1,37 @@
+.container-navbar {
+  position: relative;
+  z-index: 101;
+}
+
+.container-item-navbar {
+  background-color: #c7d5eb;
+  border-radius: 1rem 1rem 0 0;
+  bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  display: flex;
+  flex-direction: column;
+  height: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+  position: absolute;
+  transition: all 0.4s ease-in;
+  width: calc(100% - 1rem);
+}
+
+.container-item-navbar:hover {
+  cursor: pointer;
+  height: 4rem;
+  transition: height 0.3s ease-in;
+}
+
+.container-item-navbar:hover .container-item-navbar-paragraph {
+  display: block;
+}
+
+.container-item-navbar-paragraph {
+  display: none;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0 0 0 1rem;
+}
