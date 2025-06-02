@@ -1,5 +1,5 @@
 import AboutMe from "../components/aboutme/AboutMe";
-import Carousel from "../components/carousel/Carousel";
+import Carousel from "../components/experience/Experience";
 import { experienceJobs } from "./experience";
 
 export const views = [

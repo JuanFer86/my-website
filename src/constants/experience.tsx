@@ -1,10 +1,10 @@
 export const experienceJobs = [
   {
     backgroundColor:
-      "linear-gradient(90deg,rgba(59, 172, 82, 1) 0%, rgba(53, 133, 85, 1) 100%",
+      "linear-gradient(90deg,rgba(59, 172, 82,0.5) 0%, rgba(53, 133, 85, 0.5) 100%",
     date: "2022 - 2025",
     description: `
-    Built, optimizedand maintained the Progressive Web App (PWA) for a sports
+    Built, optimized and maintained the Progressive Web App (PWA) for a sports
 gambling platform using React and Styled Components, ensuring a
 seamless and responsive user experience.
 Collaborated with cross-functional teams to deliver projects on time,
@@ -18,7 +18,7 @@ leading sports betting houses in Ecuador
   },
   {
     backgroundColor:
-      "linear-gradient(90deg,rgba(250, 192, 2, 1) 0%, rgba(209, 167, 29, 1) 100%)",
+      "linear-gradient(90deg,rgba(250, 192, 2, 0.5) 0%, rgba(209, 167, 29, 0.5) 100%)",
     date: "2021 - 2022",
     description: `
     Built and maintained the frontend ecosystem for a logistics platform using
@@ -33,7 +33,7 @@ logistics data processing
   },
   {
     backgroundColor:
-      "linear-gradient(90deg,rgba(0, 30, 101, 1) 0%, rgba(30, 52, 115, 1) 100%)",
+      "linear-gradient(90deg,rgba(0, 30, 101, 0.5) 0%, rgba(30, 52, 115, 0.5) 100%)",
     date: "2020 - 2021",
     description: `
     Developed educational applications for government projects using Ionic,
