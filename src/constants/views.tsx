@@ -1,6 +1,7 @@
 import AboutMe from "../components/aboutme/AboutMe";
 import Education from "../components/education/education";
 import Experience from "../components/experience/Experience";
+import Projects from "../components/projects/Projects";
 import Skills from "../components/skills/Skills";
 import { experienceJobs } from "./experience";
 
@@ -40,7 +41,7 @@ export const views = [
     title: "Projects",
     component: (
       <>
-        <p>Projects</p>
+        <Projects />
       </>
     ),
   },

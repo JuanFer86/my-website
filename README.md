@@ -7,6 +7,7 @@ npm install
 npm run dev
 
 <!-- Todos: -->
+<!-- missing titles in views -->
 <!-- missing views -->
 <!-- unify css files -->
 <!-- tests -->

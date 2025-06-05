@@ -5,7 +5,6 @@ const Education = () => {
     <div>
       <Card
         title=" B.S. IN MULTIMEDIA ENGINEERING (SOFTWARE DEVELOPMENT FOCUS)"
-        style={{ width: "50dvw" }}
         size="b"
       >
         <p style={{ fontSize: "20px", textAlign: "center" }}>
