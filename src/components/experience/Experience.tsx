@@ -12,8 +12,11 @@ type PropsExperience = {
 const Experience = ({ items }: PropsExperience) => {
   return (
     <div className="container-experience">
-      {items.map((item) => (
-        <section style={{ background: item.backgroundColor }}>
+      {items.map((item, i) => (
+        <section
+          key={item.title + i}
+          style={{ background: item.backgroundColor }}
+        >
           <div className="container-experience-opacity"></div>
           <div className="container-experience-content">
             <h2>{item.title}</h2>

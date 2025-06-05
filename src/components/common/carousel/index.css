@@ -1,0 +1,52 @@
+.container-carousel {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  width: 100dvw;
+
+  &::before,
+  &::after {
+    background: linear-gradient(
+      to right,
+      rgba(36, 39, 59, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 70px;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-100% + 20dvw * 5));
+  }
+  100% {
+    transform: translateX(2dvw);
+  }
+}
+
+.container-carousel-track {
+  animation: scroll 15s linear infinite;
+  display: flex;
+  gap: 0.5rem;
+  width: max-content;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}

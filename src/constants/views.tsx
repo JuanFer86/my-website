@@ -1,5 +1,7 @@
 import AboutMe from "../components/aboutme/AboutMe";
-import Carousel from "../components/experience/Experience";
+import Education from "../components/education/education";
+import Experience from "../components/experience/Experience";
+import Skills from "../components/skills/Skills";
 import { experienceJobs } from "./experience";
 
 export const views = [
@@ -14,7 +16,7 @@ export const views = [
     title: "Experience",
     component: (
       <>
-        <Carousel items={experienceJobs} />
+        <Experience items={experienceJobs} />
       </>
     ),
   },
@@ -22,7 +24,7 @@ export const views = [
     title: "Skills",
     component: (
       <>
-        <p>Skills</p>
+        <Skills />
       </>
     ),
   },
@@ -30,7 +32,7 @@ export const views = [
     title: "Education",
     component: (
       <>
-        <p>Education</p>
+        <Education />
       </>
     ),
   },

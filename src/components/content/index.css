@@ -61,6 +61,8 @@
 
 @media (max-width: 430px) {
   .rotate-down-enter {
+    align-items: center;
+    display: flex;
     height: 100%;
   }
 }

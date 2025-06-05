@@ -8,7 +8,7 @@ import {
 } from "react";
 import "./index.css";
 import { Context } from "../../context";
-import ArrowDownIcon from "../../assets/arrow-down.icon";
+import ArrowDownIcon from "../../assets/icon-components/arrow-down.icon";
 
 type Props = {
   children?: React.ReactNode;
@@ -37,7 +37,6 @@ const Content = ({ children }: Props) => {
 
   const handleViewWheel = useCallback(
     (e: WheelEvent) => {
-      // console.log("hole", e.deltaY, handleView);
       if (view <= 0 && e.deltaY < 0) return;
       if (view === hasManyViews - 1 && e.deltaY > 0) return;
 
@@ -68,6 +67,8 @@ const Content = ({ children }: Props) => {
   useEffect(() => {
     const container = containerRef.current;
     const refEl = ref.current;
+
+    if (!container) return;
 
     setStyle({ transformOrigin: direction });
 
