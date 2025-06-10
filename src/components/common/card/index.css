@@ -14,6 +14,26 @@
   height: 40dvh;
   justify-content: center;
   padding: 1rem;
+
+  a {
+    align-items: center;
+    align-self: flex-end;
+    background: #c7d5eb;
+    border-radius: 1rem;
+    color: #142f55;
+    display: flex;
+    gap: 0.5rem;
+    height: 4dvh;
+    margin: 1rem;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+    width: 40%;
+  }
+
+  a:hover {
+    background: #9ba7bb;
+  }
 }
 
 .container-card-medium {
@@ -31,26 +51,6 @@ img {
 
 h2 {
   text-align: center;
-}
-
-a {
-  align-items: center;
-  align-self: flex-end;
-  background: #c7d5eb;
-  border-radius: 1rem;
-  color: #142f55;
-  display: flex;
-  gap: 0.5rem;
-  height: 4dvh;
-  margin: 1rem;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease-in;
-  width: 40%;
-}
-
-a:hover {
-  background: #9ba7bb;
 }
 
 @media (max-width: 430px) {

@@ -1,3 +1,7 @@
+import EducationIcon from "../assets/icon-components/education.icon";
+import PersonIcon from "../assets/icon-components/person.icon";
+import SkillIcon from "../assets/icon-components/skill.icon";
+import WorkHistoryIcon from "../assets/icon-components/work-history.icon";
 import AboutMe from "../components/aboutme/AboutMe";
 import Education from "../components/education/education";
 import Experience from "../components/experience/Experience";
@@ -7,11 +11,13 @@ import { experienceJobs } from "./experience";
 
 export const views = [
   {
+    title: "Profile",
     component: (
       <>
         <AboutMe />
       </>
     ),
+    icon: <PersonIcon color="#142f55" />,
   },
   {
     title: "Experience",
@@ -20,6 +26,7 @@ export const views = [
         <Experience items={experienceJobs} />
       </>
     ),
+    icon: <WorkHistoryIcon color="#142f55" />,
   },
   {
     title: "Skills",
@@ -28,6 +35,7 @@ export const views = [
         <Skills />
       </>
     ),
+    icon: <SkillIcon color="#142f55" />,
   },
   {
     title: "Education",
@@ -36,6 +44,7 @@ export const views = [
         <Education />
       </>
     ),
+    icon: <EducationIcon color="#142f55" />,
   },
   {
     title: "Projects",
@@ -43,6 +52,13 @@ export const views = [
       <>
         <Projects />
       </>
+    ),
+    icon: (
+      <img
+        src="src/assets/github.webp"
+        alt="github icon, projects"
+        width={20}
+      />
     ),
   },
 ];

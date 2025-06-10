@@ -1,26 +1,22 @@
 .container-about-me {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 35% 60%;
-  height: 100%;
-  justify-content: center;
-  max-width: 60rem;
+  max-width: 60dvw;
 }
 
-.container-about-me-title {
+.container-about-me-content {
   align-self: center;
   background-color: #bfc8d4;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: #142f55;
   justify-items: center;
-  padding: 3rem 2rem;
-  margin-right: -1rem;
-  text-align: center;
+  padding: 2rem;
+  text-align: justify;
 
   h1 {
     font-size: 30px;
     font-weight: normal;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
   }
 
   h3 {
@@ -28,96 +24,36 @@
     font-weight: bold;
     margin-top: 0.5rem;
   }
-}
 
-.container-about-me-description {
-  background-color: #4d6c99;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  color: #fff;
-  min-height: 27rem;
-  padding: 2rem;
-
-  h5 {
-    font-size: 22px;
+  h4 {
     text-align: center;
   }
+}
 
-  p {
-    font-size: 20px;
-    text-align: justify;
+.container-about-me-content-contact {
+  text-align: center;
+
+  span {
+    align-items: center;
+    color: #142f55;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      color: #142f55;
+    }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .container-about-me {
-    grid-template-columns: 40% 50%;
-    max-width: 55rem;
+    max-width: none;
   }
 
-  .container-about-me-title {
-    h1 {
-      font-size: 28px;
-    }
-
-    h3 {
-      font-size: 25px;
-    }
-  }
-
-  .container-about-me-description {
-    align-content: center;
-
-    h5 {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
-      text-align: justify;
-    }
-  }
-
-  @media (max-width: 430px) {
-    .container-about-me {
-      grid-template-columns: 1fr;
-      grid-template-rows: 30% 70%;
-      width: auto;
-    }
-
-    .container-about-me-title {
-      align-self: flex-end;
-      background-color: unset;
-      box-shadow: none;
-      justify-self: center;
-      margin: 0;
-      max-width: 20rem;
-
-      h1 {
-        margin: 0;
-      }
-
-      h3 {
-        margin: 0;
-      }
-    }
-
-    .container-about-me-description {
-      align-content: flex-start;
-      border-radius: 0;
-      height: 100%;
-      overflow: auto;
-      padding: 0 2rem;
-    }
-  }
-}
-
-@media (max-width: 360px) {
-  .container-about-me-description {
-    p {
-      height: 60%;
-      overflow: auto;
-    }
+  .container-about-me-content {
+    background-color: transparent;
+    box-shadow: none;
   }
 }

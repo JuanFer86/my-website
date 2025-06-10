@@ -18,7 +18,7 @@ function App() {
     [viewSelected]
   );
 
-  const titles = views.flatMap((view) => (view.title ? [view.title] : []));
+  const items = views.map((view) => ({ title: view.title, icon: view.icon }));
 
   return (
     <Context.Provider
@@ -32,7 +32,7 @@ function App() {
         <section>
           <Content>{ComponentSelected}</Content>
         </section>
-        <NavBar items={titles} />
+        <NavBar items={items} />
       </div>
     </Context.Provider>
   );

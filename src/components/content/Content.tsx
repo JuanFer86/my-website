@@ -9,6 +9,7 @@ import {
 import "./index.css";
 import { Context } from "../../context";
 import ArrowDownIcon from "../../assets/icon-components/arrow-down.icon";
+import { views } from "../../constants/views";
 
 type Props = {
   children?: React.ReactNode;
@@ -111,6 +112,9 @@ const Content = ({ children }: Props) => {
         </button>
       )}
       <div ref={ref} className={`rotate-down-enter`} style={{ ...style }}>
+        <h1 style={{ color: "#142f55", fontSize: "30px", textAlign: "center" }}>
+          {view !== 0 && views[view].title}
+        </h1>
         {children}
       </div>
 
