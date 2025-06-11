@@ -1,0 +1,3 @@
+describe("<Content />", () => {
+  test("should ", () => {});
+});

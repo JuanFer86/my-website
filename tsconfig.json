@@ -1,7 +1,15 @@
 {
+  "exclude": ["*/**/*.test.ts"],
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "target": "es6",
+    "moduleResolution": "node"
+  }
 }

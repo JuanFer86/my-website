@@ -1,18 +1,16 @@
+import useMediaQuery from "../../hooks/use-media-query";
 import "./index.css";
 
 const AboutMe = () => {
+  const isMobile = useMediaQuery("(max-width: 375px)");
+
   return (
     <div className="container-about-me">
       <section className="container-about-me-content">
         <h1>Hi, I'm Juan Fernando Narvaez</h1>
         <h3>Fullstack Developer</h3>
         {/* <h5>About Me</h5> */}
-        <article
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+        <article onTouchEndCapture={(e) => isMobile && e.stopPropagation()}>
           <p>
             Fullstack developer with 5+ years of experience in frontend
             development, specializing in React, Node.js, and user experience

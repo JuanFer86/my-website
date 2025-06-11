@@ -12,6 +12,11 @@
   padding: 2rem;
   text-align: justify;
 
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
   h1 {
     font-size: 30px;
     font-weight: normal;
@@ -55,5 +60,14 @@
   .container-about-me-content {
     background-color: transparent;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .container-about-me-content {
+    article {
+      height: 40dvh;
+      overflow: auto;
+    }
   }
 }

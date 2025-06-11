@@ -1,0 +1,3 @@
+describe("<Education />", () => {
+  test("should ", () => {});
+});

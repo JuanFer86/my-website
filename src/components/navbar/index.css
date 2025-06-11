@@ -1,8 +1,9 @@
 .container-navbar {
   position: absolute;
-  right: 1rem;
+  right: 1.5rem;
   top: 7dvh;
   transition: all 0.4s ease-in-out;
+  z-index: 100;
 
   ul {
     li {
@@ -11,9 +12,10 @@
       display: flex;
       list-style-type: none;
       justify-content: center;
-      width: max-content;
+      margin: 0.5rem;
       padding: 0.5rem;
       transition: all 0.4s ease-in;
+      width: max-content;
 
       &:hover > div:first-child {
         background-color: #9fb4d8;

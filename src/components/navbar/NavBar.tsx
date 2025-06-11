@@ -9,9 +9,12 @@ interface Props {
 }
 
 const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
+  // const isMobile = useMediaQuery("(max-width: 430px)");
+
   const { viewSelected, dispatchtViewSelected } = useContext(Context);
 
-  const [toggle, setToggle] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleList, setToggleList] = useState(false);
 
   const refAnimation = useRef<HTMLDivElement>(null);
   const refNav = useRef<HTMLElement>(null);
@@ -30,28 +33,34 @@ const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
     void refLi?.offsetWidth;
     refLi.classList.add("animation-toggle");
 
-    setTimeout(() => {
-      if (toggle) {
-        refNavigation.classList.remove("animation-nav-reverse");
-        refNavigation.classList.add("animation-nav");
-      } else {
-        refNavigation.classList.remove("animation-nav");
-        refNavigation.classList.add("animation-nav-reverse");
-      }
-    }, 300);
-  }, [toggle]);
+    if (toggleMenu) {
+      refNavigation.classList.remove("animation-nav-back");
+      refNavigation.classList.add("animation-nav");
+
+      setToggleList(true);
+    } else {
+      refNavigation.classList.remove("animation-nav");
+      refNavigation.classList.add("animation-nav-back");
+      setTimeout(() => {
+        setToggleList(false);
+      }, 500);
+    }
+  }, [toggleMenu]);
 
   return (
     <nav
       ref={refNav}
       className="container-navbar"
-      style={{ top: toggle ? "25dvh" : "" }}
+      // style={{ top: toggleMenu && !isMobile ? "25dvh" : "" }}
     >
       <ul>
         <>
           <li>
-            <div ref={refAnimation} onClick={() => setToggle((prev) => !prev)}>
-              {toggle ? (
+            <div
+              ref={refAnimation}
+              onClick={() => setToggleMenu((prev) => !prev)}
+            >
+              {toggleMenu ? (
                 <CloseIcon color="#142f55" />
               ) : (
                 <MenuIcon color="#142f55" />
@@ -59,11 +68,15 @@ const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
             </div>
             <ItemNavBar />
           </li>
-          {toggle &&
+          {toggleList &&
             items.map((item, i) => (
               <li
                 key={`${item.title}-${i}`}
                 onClick={() => handleChangeView(i)}
+                style={{
+                  backgroundColor: toggleList ? "#c7d5eb96" : "",
+                  borderRadius: "3rem",
+                }}
               >
                 <div
                   style={{
