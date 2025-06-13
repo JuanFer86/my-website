@@ -7,6 +7,6 @@ npm install
 npm run dev
 
 <!-- Todos: -->
-<!-- unify css files -->
 <!-- tests -->
 <!-- run lighthouse and fixing issues -->
+<!-- E2E tests -->

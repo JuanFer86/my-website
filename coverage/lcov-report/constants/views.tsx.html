@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/aboutme/AboutMe.tsx</title>
+    <title>Code coverage report for constants/views.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/aboutme</a> AboutMe.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">constants</a> views.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>59/59</span>
+                <span class='fraction'>76/76</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>59/59</span>
+                <span class='fraction'>76/76</span>
             </div>
         
             
@@ -122,7 +122,24 @@
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
 <a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -181,65 +198,99 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import useMediaQuery from "../../hooks/use-media-query";
-import "./index.css";
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import EducationIcon from "../assets/icon-components/education.icon";
+import PersonIcon from "../assets/icon-components/person.icon";
+import SkillIcon from "../assets/icon-components/skill.icon";
+import WorkHistoryIcon from "../assets/icon-components/work-history.icon";
+// import AboutMe from "../components/aboutme/AboutMe";
+// import Education from "../components/education/education";
+// import Experience from "../components/experience/Experience";
+// import Projects from "../components/projects/Projects";
+// import Skills from "../components/skills/Skills";
+import { lazyPreload } from "../utils/lazy-preload";
 &nbsp;
-const AboutMe = () =&gt; {
-  const isMobile = useMediaQuery("(max-width: 375px)");
+const AboutMe = lazyPreload(() =&gt; import("../components/aboutme/AboutMe"));
+const Education = lazyPreload(
+  () =&gt; import("../components/education/Education")
+);
+const Experience = lazyPreload(
+  () =&gt; import("../components/experience/Experience")
+);
+const Projects = lazyPreload(() =&gt; import("../components/projects/Projects"));
+const Skills = lazyPreload(() =&gt; import("../components/skills/Skills"));
 &nbsp;
-  return (
-    &lt;div className="container-about-me"&gt;
-      &lt;section className="container-about-me-content"&gt;
-        &lt;h1&gt;Hi, I'm Juan Fernando Narvaez&lt;/h1&gt;
-        &lt;h3&gt;Fullstack Developer&lt;/h3&gt;
-        {/* &lt;h5&gt;About Me&lt;/h5&gt; */}
-        &lt;article onTouchEndCapture={<span class="fstat-no" title="function not covered" >(e) =&gt; isMobile &amp;&amp; e.stopPropagation()}</span>&gt;
-          &lt;p&gt;
-            Fullstack developer with 5+ years of experience in frontend
-            development, specializing in React, Node.js, and user experience
-            design. Proven track record of delivering scalable and user-friendly
-            web applications for industries such as education, logistics, and
-            sports gambling. Experienced in Agile methodologies, RESTful APIs,
-            and state management (Redux, Context API). Passionate about creating
-            seamless user experiences and optimizing frontend performance.
-          &lt;/p&gt;
-          &lt;h4&gt;Contact&lt;/h4&gt;
-          &lt;p className="container-about-me-content-contact"&gt;
-            &lt;span&gt;
-              {" "}
-              &lt;img
-                src="src/assets/gmail.webp"
-                alt="Gmail icon"
-                width={18}
-                // loading="lazy"
-              /&gt;{" "}
-              &lt;a href="mailto:narvaezju1@gmail.com"&gt;narvaezju1@gmail.com&lt;/a&gt;
-            &lt;/span&gt;
-            {/* &lt;br /&gt; */}
-            &lt;span&gt;
-              &lt;img
-                src="src/assets/linkedin.webp"
-                alt="Gmail icon"
-                width={25}
-                // loading="lazy"
-              /&gt;
-              &lt;a
-                href="https://www.linkedin.com/in/juan-fer-narvaez/"
-                target="_blank"
-              &gt;
-                https://www.linkedin.com/in/juan-fer-narvaez/
-              &lt;/a&gt;
-            &lt;/span&gt;
-          &lt;/p&gt;
-        &lt;/article&gt;
-      &lt;/section&gt;
-      {/* &lt;section className="container-about-me-description"&gt; */}
-      {/* &lt;/section&gt; */}
-    &lt;/div&gt;
-  );
-};
+import { experienceJobs } from "./experience";
 &nbsp;
-export default AboutMe;
+export const views = [
+  {
+    title: "Profile",
+    component: (
+      &lt;&gt;
+        &lt;AboutMe /&gt;
+      &lt;/&gt;
+    ),
+    icon: &lt;PersonIcon color="#142f55" /&gt;,
+  },
+  {
+    title: "Experience",
+    component: (
+      &lt;&gt;
+        &lt;Experience items={experienceJobs} /&gt;
+      &lt;/&gt;
+    ),
+    icon: &lt;WorkHistoryIcon color="#142f55" /&gt;,
+  },
+  {
+    title: "Skills",
+    component: (
+      &lt;&gt;
+        &lt;Skills /&gt;
+      &lt;/&gt;
+    ),
+    icon: &lt;SkillIcon color="#142f55" /&gt;,
+  },
+  {
+    title: "Education",
+    component: (
+      &lt;&gt;
+        &lt;Education /&gt;
+      &lt;/&gt;
+    ),
+    icon: &lt;EducationIcon color="#142f55" /&gt;,
+  },
+  {
+    title: "Projects",
+    component: (
+      &lt;&gt;
+        &lt;Projects /&gt;
+      &lt;/&gt;
+    ),
+    icon: (
+      &lt;img
+        src="src/assets/github.webp"
+        alt="github icon, projects"
+        width={20}
+      /&gt;
+    ),
+  },
+];
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -249,14 +300,14 @@ export default AboutMe;
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2025-06-13T00:08:22.370Z
             </div>
-        <script src="../../prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     

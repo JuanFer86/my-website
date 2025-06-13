@@ -111,7 +111,7 @@ const Content = ({ children }: Props) => {
           />
         </button>
       )}
-      <div ref={ref} className={`rotate-down-enter`} style={{ ...style }}>
+      <div ref={ref} className="rotate-down-enter" style={{ ...style }}>
         <h1 style={{ color: "#142f55", fontSize: "30px", textAlign: "center" }}>
           {view !== 0 && views[view].title}
         </h1>

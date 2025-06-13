@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/aboutme/AboutMe.tsx</title>
+    <title>Code coverage report for constants/experience.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/aboutme</a> AboutMe.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">constants</a> experience.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>59/59</span>
+                <span class='fraction'>48/48</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>59/59</span>
+                <span class='fraction'>48/48</span>
             </div>
         
             
@@ -111,18 +111,7 @@
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -170,76 +159,54 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import useMediaQuery from "../../hooks/use-media-query";
-import "./index.css";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const experienceJobs = [
+  {
+    backgroundColor:
+      "linear-gradient(90deg,rgba(59, 172, 82,0.5) 0%, rgba(53, 133, 85, 0.5) 100%",
+    date: "2022 - 2025",
+    description: `
+    Built, optimized and maintained the Progressive Web App (PWA) for a sports
+gambling platform using React and Styled Components, ensuring a
+seamless and responsive user experience.
+Collaborated with cross-functional teams to deliver projects on time,
+improving team efficiency for new features.
+Optimized the platform's performance, reducing load times by 30%
+Enhanced user experience by optimizing the UI/UX.
+Contributed to the growth of the platform, which now competes with
+leading sports betting houses in Ecuador
+    `,
+    title: "Playgreen",
+  },
+  {
+    backgroundColor:
+      "linear-gradient(90deg,rgba(250, 192, 2, 0.5) 0%, rgba(209, 167, 29, 0.5) 100%)",
+    date: "2021 - 2022",
+    description: `
+    Built and maintained the frontend ecosystem for a logistics platform using
+React, Redux, and Context API, improving data flow and application
+performance.
+Collaborated with the backend team to integrate RESTful APIs, ensuring
+seamless communication between frontend and backend systems.
+Implemented new features that increased operational efficiency, improving
+logistics data processing
+    `,
+    title: "Quick",
+  },
+  {
+    backgroundColor:
+      "linear-gradient(90deg,rgba(0, 30, 101, 0.5) 0%, rgba(30, 52, 115, 0.5) 100%)",
+    date: "2020 - 2021",
+    description: `
+    Developed educational applications for government projects using Ionic,
+React, Node.js, JavaScript, HTML, and CSS, reaching 1,000+ users in the
+educational sector.
+Built Progressive Web Apps (PWAs) to deliver accessible and responsive
+solutions for teachers and students.
 &nbsp;
-const AboutMe = () =&gt; {
-  const isMobile = useMediaQuery("(max-width: 375px)");
-&nbsp;
-  return (
-    &lt;div className="container-about-me"&gt;
-      &lt;section className="container-about-me-content"&gt;
-        &lt;h1&gt;Hi, I'm Juan Fernando Narvaez&lt;/h1&gt;
-        &lt;h3&gt;Fullstack Developer&lt;/h3&gt;
-        {/* &lt;h5&gt;About Me&lt;/h5&gt; */}
-        &lt;article onTouchEndCapture={<span class="fstat-no" title="function not covered" >(e) =&gt; isMobile &amp;&amp; e.stopPropagation()}</span>&gt;
-          &lt;p&gt;
-            Fullstack developer with 5+ years of experience in frontend
-            development, specializing in React, Node.js, and user experience
-            design. Proven track record of delivering scalable and user-friendly
-            web applications for industries such as education, logistics, and
-            sports gambling. Experienced in Agile methodologies, RESTful APIs,
-            and state management (Redux, Context API). Passionate about creating
-            seamless user experiences and optimizing frontend performance.
-          &lt;/p&gt;
-          &lt;h4&gt;Contact&lt;/h4&gt;
-          &lt;p className="container-about-me-content-contact"&gt;
-            &lt;span&gt;
-              {" "}
-              &lt;img
-                src="src/assets/gmail.webp"
-                alt="Gmail icon"
-                width={18}
-                // loading="lazy"
-              /&gt;{" "}
-              &lt;a href="mailto:narvaezju1@gmail.com"&gt;narvaezju1@gmail.com&lt;/a&gt;
-            &lt;/span&gt;
-            {/* &lt;br /&gt; */}
-            &lt;span&gt;
-              &lt;img
-                src="src/assets/linkedin.webp"
-                alt="Gmail icon"
-                width={25}
-                // loading="lazy"
-              /&gt;
-              &lt;a
-                href="https://www.linkedin.com/in/juan-fer-narvaez/"
-                target="_blank"
-              &gt;
-                https://www.linkedin.com/in/juan-fer-narvaez/
-              &lt;/a&gt;
-            &lt;/span&gt;
-          &lt;/p&gt;
-        &lt;/article&gt;
-      &lt;/section&gt;
-      {/* &lt;section className="container-about-me-description"&gt; */}
-      {/* &lt;/section&gt; */}
-    &lt;/div&gt;
-  );
-};
-&nbsp;
-export default AboutMe;
+    `,
+    title: "Corporación Talentum",
+  },
+];
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -249,14 +216,14 @@ export default AboutMe;
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2025-06-13T00:08:22.370Z
             </div>
-        <script src="../../prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     
