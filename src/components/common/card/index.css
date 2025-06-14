@@ -55,6 +55,10 @@ h2 {
 }
 
 @media (max-width: 430px) {
+  .container-card {
+    height: 20rem;
+  }
+
   .container-card-medium {
     width: 35dvw;
   }

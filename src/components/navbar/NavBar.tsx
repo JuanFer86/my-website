@@ -21,6 +21,7 @@ const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
 
   const handleChangeView = (index: number) => {
     dispatchtViewSelected({ type: "set_view", payload: index });
+    setToggleMenu(false);
   };
 
   useEffect(() => {

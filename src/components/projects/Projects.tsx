@@ -28,6 +28,7 @@ function Projects() {
             }}
             onTouchStart={(e) => e.stopPropagation()}
             onTouchEnd={(e) => e.stopPropagation()}
+            onTouchEndCapture={(e) => e.stopPropagation()}
           >
             {project.tools.map((tool, i) => (
               <p
