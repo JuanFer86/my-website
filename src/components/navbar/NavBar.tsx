@@ -46,7 +46,7 @@ const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
           refNavigation.classList.add("animation-nav-back");
           setTimeout(() => {
             setToggleList(false);
-          }, 500);
+          }, 490);
         }
       }
     });
