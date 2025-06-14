@@ -7,6 +7,7 @@
   justify-content: center;
   /* height: 70dvh; */
   width: 40dvw;
+  max-width: 38rem;
 
   section {
     align-items: center;

@@ -1,42 +1,53 @@
+import TypescriptLogo from "../assets/typescript.webp";
+import ReactLogo from "../assets/React.webp";
+import NextLogo from "../assets/nextjs.webp";
+import NodeLogo from "../assets/nodejs.webp";
+import ExpressLogo from "../assets/expressjs.webp";
+import NestLogo from "../assets/nestjs.webp";
+import SQLLogo from "../assets/sql.webp";
+import MongoLogo from "../assets/mongodb.webp";
+import GitLogo from "../assets/git.webp";
+import DockerLogo from "../assets/docker.webp";
+
 export const skills = [
   {
-    image: "src/assets/typescript.webp",
+    image: TypescriptLogo,
     title: "Typescript",
   },
   {
-    image: "src/assets/React.webp",
+    image: ReactLogo,
     title: "React.js",
   },
   {
-    image: "src/assets/nextjs.webp",
+    image: NextLogo,
     title: "Next.js",
   },
   {
-    image: "src/assets/nodejs.webp",
+    image: NodeLogo,
     title: "Node.js",
   },
   {
-    image: "src/assets/expressjs.webp",
+    image: ExpressLogo,
     title: "Express.js",
   },
   {
-    image: "src/assets/nestjs.webp",
+    image: NestLogo,
     title: "NestJS",
   },
   {
-    image: "src/assets/sql.webp",
+    image: SQLLogo,
     title: "SQL Databases",
   },
   {
-    image: "src/assets/mongodb.webp",
+    image: MongoLogo,
     title: "MongoDB",
   },
   {
-    image: "src/assets/git.webp",
+    image: GitLogo,
     title: "Git",
   },
   {
-    image: "src/assets/docker.webp",
+    image: DockerLogo,
     title: "Docker",
   },
 ];

@@ -1,5 +1,5 @@
 .container-about-me {
-  max-width: 60dvw;
+  max-width: 40rem;
 }
 
 .container-about-me-content {
@@ -24,13 +24,14 @@
     text-align: center;
   }
 
-  h3 {
+  h2 {
     font-size: 28px;
     font-weight: bold;
     margin-top: 0.5rem;
   }
 
-  h4 {
+  header {
+    font-weight: bold;
     text-align: center;
   }
 }
@@ -60,6 +61,10 @@
   .container-about-me-content {
     background-color: transparent;
     box-shadow: none;
+
+    p {
+      font-size: calc(1.1vh + 1.1vw);
+    }
   }
 }
 

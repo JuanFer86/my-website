@@ -10,5 +10,4 @@ export type ContextType = {
   hasManyViews: number;
 };
 
-// Creamos el contexto
 export const Context = createContext<ContextType>({} as ContextType);

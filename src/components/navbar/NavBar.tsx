@@ -9,12 +9,12 @@ interface Props {
 }
 
 const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
-  // const isMobile = useMediaQuery("(max-width: 430px)");
-
   const { viewSelected, dispatchtViewSelected } = useContext(Context);
 
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleList, setToggleList] = useState(false);
+
+  const [hasMounted, setHasMounted] = useState(false);
 
   const refAnimation = useRef<HTMLDivElement>(null);
   const refNav = useRef<HTMLElement>(null);
@@ -29,30 +29,33 @@ const NavBar = ({ items = [{ title: "empty", icon: <></> }] }: Props) => {
 
     if (!refLi || !refNavigation) return;
 
-    refLi.classList.remove("animation-toggle");
-    void refLi?.offsetWidth;
-    refLi.classList.add("animation-toggle");
+    requestAnimationFrame(() => {
+      if (hasMounted) {
+        refLi.classList.remove("animation-toggle");
+        void refLi?.offsetWidth;
+        refLi.classList.add("animation-toggle");
 
-    if (toggleMenu) {
-      refNavigation.classList.remove("animation-nav-back");
-      refNavigation.classList.add("animation-nav");
+        if (toggleMenu) {
+          refNavigation.classList.remove("animation-nav-back");
+          refNavigation.classList.add("animation-nav");
 
-      setToggleList(true);
-    } else {
-      refNavigation.classList.remove("animation-nav");
-      refNavigation.classList.add("animation-nav-back");
-      setTimeout(() => {
-        setToggleList(false);
-      }, 500);
-    }
+          setToggleList(true);
+        } else {
+          refNavigation.classList.remove("animation-nav");
+          refNavigation.classList.add("animation-nav-back");
+          setTimeout(() => {
+            setToggleList(false);
+          }, 500);
+        }
+      }
+    });
+
+    setHasMounted(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [toggleMenu]);
 
   return (
-    <nav
-      ref={refNav}
-      className="container-navbar"
-      // style={{ top: toggleMenu && !isMobile ? "25dvh" : "" }}
-    >
+    <nav ref={refNav} className="container-navbar">
       <ul>
         <>
           <li>

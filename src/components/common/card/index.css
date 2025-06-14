@@ -42,6 +42,7 @@
 
 .container-card-biggest {
   width: 50dvw;
+  max-width: 40rem;
 }
 
 img {

@@ -1,4 +1,5 @@
 import { type CSSProperties, type ReactNode } from "react";
+import githubLogo from "../../../assets/github.webp";
 import "./index.css";
 
 type PropsCard = {
@@ -34,7 +35,7 @@ const Card = ({
       {link && (
         <a href={link} target="_blank">
           Go
-          <img src="src\assets\github.webp" alt="gitbuh icon" width={20} />
+          <img src={githubLogo} alt="gitbuh icon" width={20} />
         </a>
       )}
     </article>

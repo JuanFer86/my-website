@@ -2,12 +2,8 @@ import EducationIcon from "../assets/icon-components/education.icon";
 import PersonIcon from "../assets/icon-components/person.icon";
 import SkillIcon from "../assets/icon-components/skill.icon";
 import WorkHistoryIcon from "../assets/icon-components/work-history.icon";
-// import AboutMe from "../components/aboutme/AboutMe";
-// import Education from "../components/education/education";
-// import Experience from "../components/experience/Experience";
-// import Projects from "../components/projects/Projects";
-// import Skills from "../components/skills/Skills";
 import { lazyPreload } from "../utils/lazy-preload";
+import githubLogo from "../assets/github.webp";
 
 const AboutMe = lazyPreload(() => import("../components/aboutme/AboutMe"));
 const Education = lazyPreload(
@@ -65,12 +61,6 @@ export const views = [
         <Projects />
       </>
     ),
-    icon: (
-      <img
-        src="src/assets/github.webp"
-        alt="github icon, projects"
-        width={20}
-      />
-    ),
+    icon: <img src={githubLogo} alt="github icon, projects" width={20} />,
   },
 ];

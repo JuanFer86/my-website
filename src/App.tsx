@@ -11,7 +11,6 @@ function App() {
     reducer,
     initialState
   );
-  // const [viewSelected, setViewSelected] = useState(0);
 
   const ComponentSelected = useMemo(
     () => views[viewSelected.view].component,

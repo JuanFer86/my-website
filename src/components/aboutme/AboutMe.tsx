@@ -1,4 +1,6 @@
 import useMediaQuery from "../../hooks/use-media-query";
+import GmailLogo from "../../assets/gmail.webp";
+import LinkedinLogo from "../../assets/linkedin.webp";
 import "./index.css";
 
 const AboutMe = () => {
@@ -8,7 +10,7 @@ const AboutMe = () => {
     <div className="container-about-me">
       <section className="container-about-me-content">
         <h1>Hi, I'm Juan Fernando Narvaez</h1>
-        <h3>Fullstack Developer</h3>
+        <h2>Fullstack Developer</h2>
         {/* <h5>About Me</h5> */}
         <article onTouchEndCapture={(e) => isMobile && e.stopPropagation()}>
           <p>
@@ -20,26 +22,16 @@ const AboutMe = () => {
             and state management (Redux, Context API). Passionate about creating
             seamless user experiences and optimizing frontend performance.
           </p>
-          <h4>Contact</h4>
+          <header>Contact</header>
           <p className="container-about-me-content-contact">
             <span>
               {" "}
-              <img
-                src="src/assets/gmail.webp"
-                alt="Gmail icon"
-                width={18}
-                // loading="lazy"
-              />{" "}
+              <img src={GmailLogo} alt="Gmail icon" width={18} />{" "}
               <a href="mailto:narvaezju1@gmail.com">narvaezju1@gmail.com</a>
             </span>
             {/* <br /> */}
             <span>
-              <img
-                src="src/assets/linkedin.webp"
-                alt="Gmail icon"
-                width={25}
-                // loading="lazy"
-              />
+              <img src={LinkedinLogo} alt="Linkedin icon" width={25} />
               <a
                 href="https://www.linkedin.com/in/juan-fer-narvaez/"
                 target="_blank"

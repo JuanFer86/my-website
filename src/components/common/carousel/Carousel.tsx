@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import "./index.css";
 
 type PropsCarousel = {
-  // items: { image: string; title: string }[];
   children: ReactNode;
 };
 

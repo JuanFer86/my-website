@@ -29,6 +29,7 @@ const Content = ({ children }: Props) => {
   const [style, setStyle] = useState({
     transformOrigin: "bottom",
   });
+  const [hasMounted, setHasMounted] = useState(false);
 
   const handleView = (isAdd: boolean) => {
     dispatchtViewSelected({
@@ -71,13 +72,23 @@ const Content = ({ children }: Props) => {
 
     if (!container) return;
 
-    setStyle({ transformOrigin: direction });
+    if (hasMounted) {
+      setStyle({ transformOrigin: direction });
 
-    refEl?.classList.remove("rotate-down-enter");
+      refEl?.classList.remove("rotate-down-enter");
 
-    void refEl?.offsetWidth;
+      void refEl?.offsetWidth;
 
-    refEl?.classList.add("rotate-down-enter");
+      refEl?.classList.add("rotate-down-enter");
+    }
+
+    setHasMounted(true);
+
+    if (!hasMounted) {
+      container?.addEventListener("wheel", handleViewWheel);
+      container?.addEventListener("touchstart", handleTouchStart);
+      container?.addEventListener("touchend", handleTouchEnd);
+    }
 
     const animationEnd = () => {
       container?.addEventListener("wheel", handleViewWheel);
@@ -99,6 +110,7 @@ const Content = ({ children }: Props) => {
     <div ref={containerRef} className="container-content">
       {view > 0 && (
         <button
+          aria-label="button before view"
           className="container-content-button"
           onClick={(e: MouseEvent<HTMLButtonElement>) => {
             e.stopPropagation();
@@ -108,10 +120,11 @@ const Content = ({ children }: Props) => {
         >
           <ArrowDownIcon
             style={{ transform: "rotateZ(180deg) translateY(5px)" }}
+            aria-hidden
           />
         </button>
       )}
-      <div ref={ref} className="rotate-down-enter" style={{ ...style }}>
+      <div ref={ref} /* className="rotate-down-enter" */ style={{ ...style }}>
         <h1 style={{ color: "#142f55", fontSize: "30px", textAlign: "center" }}>
           {view !== 0 && views[view].title}
         </h1>
@@ -120,6 +133,7 @@ const Content = ({ children }: Props) => {
 
       {view < hasManyViews - 1 && (
         <button
+          aria-label="button next view"
           className="container-content-button"
           onClick={(e: MouseEvent<HTMLButtonElement>) => {
             e.stopPropagation();
@@ -127,7 +141,7 @@ const Content = ({ children }: Props) => {
           }}
           style={{ bottom: "5rem" }}
         >
-          <ArrowDownIcon />
+          <ArrowDownIcon aria-hidden />
         </button>
       )}
     </div>
