@@ -28,7 +28,7 @@
   }
 }
 
-@keyframes scroll {
+/* @keyframes scroll {
   0% {
     transform: translateX(0);
   }
@@ -38,15 +38,31 @@
   100% {
     transform: translateX(2dvw);
   }
-}
+} */
 
 .container-carousel-track {
-  animation: scroll 15s linear infinite;
+  /* animation: scroll 15s linear infinite; */
   display: flex;
   gap: 0.5rem;
+  overflow-x: auto;
+  user-select: none;
   width: max-content;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &:hover {
     animation-play-state: paused;
+    cursor: grab;
+    /* overflow: auto; */
+  }
+
+  &:active {
+    cursor: grabbing;
   }
 }

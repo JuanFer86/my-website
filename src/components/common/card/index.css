@@ -38,6 +38,7 @@
 
 .container-card-medium {
   width: 20dvw;
+  min-width: 20dvw;
 }
 
 .container-card-biggest {
@@ -48,10 +49,13 @@
 img {
   aspect-ratio: 1 / 1;
   object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 h2 {
   text-align: center;
+  user-select: none;
 }
 
 @media (max-width: 430px) {
@@ -61,6 +65,7 @@ h2 {
 
   .container-card-medium {
     width: 35dvw;
+    min-width: 35dvw;
   }
 
   .container-card-biggest {
