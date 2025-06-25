@@ -13,12 +13,14 @@ const config: Config = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
   transform: {
-    "^.+\\.(ts|tsx)$": ["ts-jest", {}],
+    "^.+\\.(ts|tsx)$": ["ts-jest", { tsconfig: "./tsconfig.test.json" }],
   },
   detectOpenHandles: true,
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png|webp|svg)$": "<rootDir>/src/tests/__mocks__/fileMocks.ts",
   },
+  transformIgnorePatterns: ["/node_modules/"],
   setupFilesAfterEnv: ["<rootDir>/src/tests/setupTests.ts"],
 };
 

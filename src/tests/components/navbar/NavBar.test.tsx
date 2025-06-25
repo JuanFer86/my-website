@@ -6,22 +6,21 @@ import NavBar from "../../../components/navbar/NavBar";
 import { Context } from "../../../context";
 import type { mockType } from "../content/Content.test";
 
+import "@testing-library/jest-dom";
+
 describe("<NavBar />", () => {
   const props = {
     items: [
       {
         title: "Profile",
-
         icon: <PersonIcon color="#142f55" />,
       },
       {
         title: "Experience",
-
         icon: <WorkHistoryIcon color="#142f55" />,
       },
       {
         title: "Skills",
-
         icon: <SkillIcon color="#142f55" />,
       },
     ],
@@ -52,14 +51,20 @@ describe("<NavBar />", () => {
     component().getAllByRole("navigation");
   });
 
-  test("should changle toggle menu icon", () => {
+  test("should change toggle close icon and change again to menu icon", async () => {
     const toggleDiv = component().container.querySelector("li > div");
 
     expect(screen.getAllByRole("listitem")).toHaveLength(1);
     fireEvent.click(toggleDiv as Element);
 
     expect(toggleDiv?.innerHTML).toMatch("svg");
-    expect(screen.getAllByRole("listitem")).toHaveLength(4);
+
+    const itemExperience = await screen.findByText("Experience");
+
+    expect(itemExperience).toBeInTheDocument();
+
+    fireEvent.click(toggleDiv as Element);
+    expect(toggleDiv).toHaveClass("animation-toggle");
   });
 
   test("should change view to click a title view", async () => {
@@ -68,9 +73,11 @@ describe("<NavBar />", () => {
 
     fireEvent.click(toggleDiv as Element);
 
-    const listItems = container.querySelectorAll("li");
+    const itemExperience = await screen.findByText("Experience");
 
-    fireEvent.click(listItems[2] as Element);
+    // screen.debug(itemExperience);
+
+    fireEvent.click(itemExperience as Element);
 
     expect(mockDispatch).toHaveBeenCalled();
     expect(mockDispatch).toHaveBeenCalledWith({
